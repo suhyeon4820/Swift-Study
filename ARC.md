@@ -1,10 +1,17 @@
-## ARC(Auto Reference Count)
+## ARC(Automatic Reference Counting)
 
-#### ARC(Auto Reference Counting)
+#### ARC 개념
 
-- **자동**으로 **메모리 관리**해주는 좋은 친구
-- 객체에 대한 **참조 카운트를 관리**하고 **0**이 되면 자동으로 **메모리 해제**
-- run time에 계속 실행되는게 아니라 **complie time**(build 할 때)에 실행
+- 컴파일러가 인스턴스(객체)의 참조 횟수를 카운팅하여 **참조 카운트가 0인 인스턴스를 메모리에서 자동으로 해제**시키는 메모리 관리 방식
+  - Swift는 ARC를 통해 앱의 메모리 사용 상태를 추적 및 관리
+  - run time에 계속 실행되는게 아니라 **complie time**(build 할 때)에 실행
+  - 참조 카운팅(Reference Counting, RC)은 **참조 타입**인 **클래스 인스턴스 및 클로저**에만 적용
+    - 구조체와 열거형(enumeration)은 참조 타입이 아닌 값 타입이기 때문에 참조를 사용하지 않음
+  - ARC는 인스턴스를 참조하게 되는 시점에 **컴파일러가 사용자 대신 Retain/Release code를 자동으로 생성**
+- ARC의 도입으로 인스턴스를 참조하고(retain) 해제하는(release) 코드를 개발자가 직접 작성해야 했던 기존의 방식**(MRR, Manual Retain-Release)**에서 벗어남
+  - 객체가 인스턴스를 참조할 때는 **retain** method를 추가하고, 모두 사용하고 난 뒤 메모리에서 정리할 때는 **release** method를 추가
+
+<img src = "\..\image\02\06.png">
 
 
 
@@ -24,3 +31,4 @@
 ***
 
 https://cskime.tistory.com/12?category=885092
+
