@@ -14,6 +14,19 @@
 
   <img src = "..\image\02\05.png" >
 
+- **프레임워크 접두어** : 코코아 터치 프레임워크의 주요 프레임워크들은 자신들에게 속해있는 객체의 이름에 특정 접두어를 붙이는 경향이 있음 
+
+  |    프레임워크     | 접두어 |
+  | :---------------: | :----: |
+  |    Foundation     |   NS   |
+  |       UIKit       |   UI   |
+  | UserNotifications |   UN   |
+  |      MapKit       |   MK   |
+  |  Core Foundation  |   CF   |
+  |   Core Graphics   |   CG   |
+  |   AVFoundation    |   AV   |
+
+
 
 
 ### 2. iOS Architecture
@@ -27,7 +40,7 @@
 
 <img src = "..\image\02\04.png" width = "300">
 
-**Cocoa Touch Layer** (UIKit)
+**Cocoa Touch Layer** (UIKit 포함)
 
 ***
 
@@ -36,6 +49,8 @@
 > iOS에 설치되고 실행되는 모든 애플리케이션은 코코아터치 계층에서 제공하는 프레임워크를 이용해 기능을 구현하고 동작함
 
 `UIKit` → UI element, life cycle management, gestures, touch …
+
+- 아이폰이나 아이패드, 애플 와치나 애플TV 등에서 실행되는 애플리케이션의 유저 인터페이스를 제공하는 프레임워크
 
 `Address Book` → Contact, editing ….
 
@@ -79,11 +94,16 @@
 
 
 
-**Core Services Layer** (Foundation)
+**Core Services Layer** (Foundation 포함)
 
 ***
 
 >문자열 처리, 데이터 집합 관리, 네트워크, 주소록 관리, 환경 설정 등 *핵심적인 서비스 제공*하며, GPS, 나침반, 가속도 센서나 자이로스코프 센서와 같이 *디바이스의 하드웨어 특성에 기반한 서비스 제공*
+
+`Foundation`→ Core foundation such as utility classes
+
+- 애플리케이션의 핵심 객체와 네트워크, 문자열 처리 등의 서비스를 제공하는 프레임워크 
+  ex) NSDate, NSURL, NString, NSException
 
 `Address Book` → Lower layer contacts
 
@@ -98,8 +118,6 @@
 `Core Telephony`→ phone interface
 
 `Event Kit`→ low level calendar events
-
-`Foundation`→ Core foundation such as utility classes
 
 `Mobile Core Services`→ Uniform type identifier support
 
