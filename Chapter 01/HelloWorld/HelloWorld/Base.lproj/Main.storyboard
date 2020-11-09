@@ -17,35 +17,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="첫번째 화면" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nc6-H9-xfk">
-                                <rect key="frame" x="168" y="174" width="78" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="150.5" y="174" width="113.5" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8P-ud-fw1">
-                                <rect key="frame" x="172.5" y="295" width="69" height="30"/>
-                                <state key="normal" title="페이지 이동"/>
+                                <rect key="frame" x="148" y="304" width="118" height="30"/>
+                                <state key="normal" title="페이지 이동(Show)"/>
                                 <connections>
-                                    <segue destination="Jt6-19-FU8" kind="show" id="1Xv-zU-VG9"/>
+                                    <segue destination="Jt6-19-FU8" kind="show" id="uIO-1I-oYN"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="HIE-4M-BBV">
-                                <rect key="frame" x="98" y="499" width="218" height="31"/>
+                                <rect key="frame" x="98" y="508" width="218" height="31"/>
                                 <color key="minimumTrackTintColor" systemColor="systemIndigoColor"/>
                                 <color key="maximumTrackTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGD-sf-cEG">
-                                <rect key="frame" x="169" y="379" width="76" height="30"/>
+                                <rect key="frame" x="169" y="388" width="76" height="30"/>
                                 <state key="normal" title="Full Screen"/>
                                 <connections>
                                     <action selector="fullScreenBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kFV-kG-W0d"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WG6-Rv-cQD">
-                                <rect key="frame" x="181" y="227" width="52" height="30"/>
+                                <rect key="frame" x="181" y="236" width="52" height="30"/>
                                 <state key="normal" title="인사하기"/>
                                 <connections>
                                     <action selector="sayHello:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PAL-4o-IY8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwr-3W-nts">
+                                <rect key="frame" x="146" y="333" width="117" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="페이지 이동(Modal"/>
+                                <connections>
+                                    <segue destination="Jt6-19-FU8" kind="presentation" id="NTs-Zb-IVc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -73,25 +81,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="95.652173913043484" y="77.678571428571431"/>
+            <point key="canvasLocation" x="-301" y="90"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="hzs-fJ-eZg">
             <objects>
-                <viewController storyboardIdentifier="secondVC" modalPresentationStyle="fullScreen" id="Jt6-19-FU8" customClass="SecondViewController" customModule="HelloWorld" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="secondVC" id="Jt6-19-FU8" customClass="SecondViewController" customModule="HelloWorld" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="poI-0K-ToA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="두번째 화면" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sg8-GR-YS8">
-                                <rect key="frame" x="168" y="174" width="78" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="150.5" y="130" width="113.5" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfy-HE-wfW">
-                                <rect key="frame" x="172.5" y="225" width="69" height="30"/>
-                                <state key="normal" title="페이지 이동"/>
+                                <rect key="frame" x="172.5" y="190" width="69" height="30"/>
+                                <state key="normal" title="페이지 이동">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="dismissBtn:" destination="Jt6-19-FU8" eventType="touchUpInside" id="sDo-s6-zzM"/>
                                 </connections>
@@ -113,6 +123,9 @@
             <point key="canvasLocation" x="960.86956521739137" y="77.678571428571431"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="NTs-Zb-IVc"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

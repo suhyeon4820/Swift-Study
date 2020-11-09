@@ -42,7 +42,7 @@
   - 다른 뷰들은 화면 소멸과 함께 메모리가 해제되어 viewDidLoad() 재호출됨
 - IB를 사용하는 경우 이 메서드가 호출되기 전까지 다음의 작업들이 선행
   1. 스토리보드의 정보에 근거하여 뷰들을 인스턴스화
-  2. 모든 outlet들과 action들을 연결
+  2. 모든 outlet들과 action들을 빌더의 객체와 연결(@IBOulet, @IBAction)
   3. root view를 VC의 `view` 프로퍼티에 할당
   4. VC의 awakeFromNib() 메서드를 호출
 -  `view`와 그 계층에 대한 추가적인 초기화(additional initialization)를 수행
