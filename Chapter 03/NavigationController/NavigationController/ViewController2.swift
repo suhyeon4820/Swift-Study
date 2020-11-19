@@ -12,10 +12,14 @@ class ViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //self.navigationItem.title = "2"
         // Do any additional setup after loading the view.
     }
     
 
+    @IBAction func previousPage(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     /*
     // MARK: - Navigation
 
@@ -26,4 +30,7 @@ class ViewController2: UIViewController {
     }
     */
 
+    @IBAction func returnPage(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

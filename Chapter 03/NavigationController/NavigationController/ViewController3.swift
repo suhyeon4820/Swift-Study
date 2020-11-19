@@ -11,6 +11,7 @@ class ViewController3: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .purple
 
         // Do any additional setup after loading the view.
     }
@@ -26,4 +27,7 @@ class ViewController3: UIViewController {
     }
     */
 
+    @IBAction func previousPage(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

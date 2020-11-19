@@ -1,16 +1,17 @@
 //
-//  ViewController4.swift
-//  NavigationController
+//  ThirdViewController.swift
+//  DataDelivery
 //
-//  Created by 정수현 on 2020/11/08.
+//  Created by 정수현 on 2020/11/09.
 //
 
 import UIKit
 
-class ViewController4: UIViewController {
+class ThirdViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .yellow
 
         // Do any additional setup after loading the view.
     }

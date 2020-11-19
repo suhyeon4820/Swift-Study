@@ -1,24 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="So9-ge-EI2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--1페이지-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NavigationController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSL-bs-vKJ">
+                                <rect key="frame" x="111" y="188" width="192" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="네비게이션 (다음)-push"/>
+                                <connections>
+                                    <action selector="nextPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SFZ-z4-fax"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxC-lu-509">
+                                <rect key="frame" x="148" y="274" width="118" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="세그웨이(다음)"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvW-Lc-KEv">
+                                <rect key="frame" x="132" y="360" width="150" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="다음 화면-present"/>
+                                <connections>
+                                    <action selector="callPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bHW-UE-sTC"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WvW-Lc-KEv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JOa-VY-OhP"/>
+                            <constraint firstItem="JxC-lu-509" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O6a-6e-Haw"/>
+                            <constraint firstItem="JxC-lu-509" firstAttribute="top" secondItem="RSL-bs-vKJ" secondAttribute="bottom" constant="50" id="PaB-3D-SNK"/>
+                            <constraint firstItem="RSL-bs-vKJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iFU-dB-nVs"/>
+                            <constraint firstItem="WvW-Lc-KEv" firstAttribute="top" secondItem="JxC-lu-509" secondAttribute="bottom" constant="50" id="mfy-ks-ntV"/>
+                            <constraint firstItem="RSL-bs-vKJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="zgb-Eb-Uww"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="1페이지" id="UqG-23-08V">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0xh-6S-FfL">
+                            <connections>
+                                <segue destination="CIe-Wn-gKP" kind="show" identifier="segueVC2" id="hNf-FR-ruA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="CIe-Wn-gKP" kind="presentation" id="yMJ-Hi-orV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="840.57971014492762" y="77.678571428571431"/>
+        </scene>
+        <!--2페이지-->
+        <scene sceneID="5U7-1H-XV2">
+            <objects>
+                <viewController storyboardIdentifier="secondVC" id="CIe-Wn-gKP" customClass="ViewController2" customModule="NavigationController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7gt-S8-Lhy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxO-T4-2ZI">
+                                <rect key="frame" x="115.5" y="100" width="183" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="네비게이션 (이전)-pop"/>
+                                <connections>
+                                    <action selector="previousPage:" destination="CIe-Wn-gKP" eventType="touchUpInside" id="OwC-3x-Xd7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V46-hW-DgB">
+                                <rect key="frame" x="127.5" y="268" width="159" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="이전 화면 - dismiss"/>
+                                <connections>
+                                    <action selector="returnPage:" destination="CIe-Wn-gKP" eventType="touchUpInside" id="6Xl-6p-ntH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o49-0S-rMs">
+                                <rect key="frame" x="148" y="186" width="118" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="세그웨이(이전)"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lkT-tS-4NL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="o49-0S-rMs" firstAttribute="top" secondItem="qxO-T4-2ZI" secondAttribute="bottom" constant="50" id="0JR-Co-mJB"/>
+                            <constraint firstItem="o49-0S-rMs" firstAttribute="centerX" secondItem="7gt-S8-Lhy" secondAttribute="centerX" id="1Ci-qf-xg7"/>
+                            <constraint firstItem="qxO-T4-2ZI" firstAttribute="top" secondItem="lkT-tS-4NL" secondAttribute="top" constant="100" id="B7t-OQ-4Hk"/>
+                            <constraint firstItem="V46-hW-DgB" firstAttribute="centerX" secondItem="7gt-S8-Lhy" secondAttribute="centerX" id="FCF-n1-PU8"/>
+                            <constraint firstItem="V46-hW-DgB" firstAttribute="top" secondItem="qxO-T4-2ZI" secondAttribute="bottom" constant="132" id="NiB-t7-Wwu"/>
+                            <constraint firstItem="qxO-T4-2ZI" firstAttribute="centerX" secondItem="7gt-S8-Lhy" secondAttribute="centerX" id="wVw-FG-ZUC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="2페이지" id="49D-8n-D5A"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mZj-8U-oTt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1664" y="78"/>
+        </scene>
+        <!--View Controller3-->
+        <scene sceneID="5rn-cY-zrL">
+            <objects>
+                <viewController storyboardIdentifier="ViewController3" id="Lsz-Ug-gcS" customClass="ViewController3" customModule="NavigationController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0lC-Ro-ZPR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Uu-PY-fBe">
+                                <rect key="frame" x="158.5" y="433" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="이전 - dismiss">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="previousPage:" destination="Lsz-Ug-gcS" eventType="touchUpInside" id="KAr-AY-kRV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iDZ-et-f9U"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4Uu-PY-fBe" firstAttribute="centerX" secondItem="0lC-Ro-ZPR" secondAttribute="centerX" id="9bt-wQ-f7E"/>
+                            <constraint firstItem="4Uu-PY-fBe" firstAttribute="centerY" secondItem="0lC-Ro-ZPR" secondAttribute="centerY" id="JoI-dl-yz0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pje-0L-CR1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2570" y="78"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="e8m-cR-xhh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="So9-ge-EI2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fOw-Z3-kW4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fuG-aj-81N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SGr-Dq-yR9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="148" y="78"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="yMJ-Hi-orV"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -17,7 +17,7 @@
 - **프레임워크 접두어** : 코코아 터치 프레임워크의 주요 프레임워크들은 자신들에게 속해있는 객체의 이름에 특정 접두어를 붙이는 경향이 있음 
 
   - @(Annotation) : 프로퍼티나 메소드의 성격을 알려줌
-  - @IBOulet - IB(Interface Builder)의 객체를 참조하는 프로퍼티
+    - @IBOulet - IB(Interface Builder)의 객체를 참조하는 프로퍼티
     - @IBAction - IB(Interface Builder)의 객체에서 일어나는 이벤트를 받는 메소드
   
   |    프레임워크     | 접두어 |
