@@ -1,10 +1,10 @@
 //
 //  AppDelegate.swift
-//  Alert
+//  UserNotification
 //
-//  Created by 정수현 on 2020/11/19.
+//  Created by 정수현 on 2020/11/20.
 //
-import UserNotifications
+
 import UIKit
 
 @main
@@ -15,7 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
-        
     }
 
     // MARK: UISceneSession Lifecycle

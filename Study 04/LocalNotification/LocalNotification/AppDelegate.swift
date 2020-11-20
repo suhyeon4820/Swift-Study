@@ -1,21 +1,25 @@
 //
 //  AppDelegate.swift
-//  Alert
+//  LocalNotification
 //
-//  Created by 정수현 on 2020/11/19.
+//  Created by 정수현 on 2020/11/20.
 //
-import UserNotifications
-import UIKit
 
+import UIKit
+import UserNotifications
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        //
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+            if granted {
+                print("User gave permissions for local notifications")
+            }
+        }
         return true
-        
     }
 
     // MARK: UISceneSession Lifecycle
