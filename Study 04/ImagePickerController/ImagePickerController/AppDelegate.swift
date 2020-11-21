@@ -1,19 +1,19 @@
 //
 //  AppDelegate.swift
-//  LocalNotification
+//  ImagePickerController
 //
-//  Created by 정수현 on 2020/11/20.
+//  Created by 정수현 on 2020/11/21.
 //
 
 import UIKit
-import UserNotifications
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-       
+        // Override point for customization after application launch.
         return true
     }
 

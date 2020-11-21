@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         content.body = "Good Day"
         content.userInfo = ["customData": "aaa"]
         content.sound = .default
+        content.badge = 1
         
         // Step3 - Create the notificaiton trigger
         let date = Date().addingTimeInterval(5)
