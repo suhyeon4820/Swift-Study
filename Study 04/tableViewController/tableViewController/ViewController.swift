@@ -7,31 +7,36 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController {
     
-    var dataset = [ ("다크 나이트", "영웅물에 철학에 음악까지 )]
-
     @IBOutlet weak var tableView: UITableView!
-  
+    let country = ["a", "b", "c", "d"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        //tableView.register(TableViewCell2.nib(), forCellReuseIdentifier: TableViewCell2.identifier)
+        tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
     }
-
     
+}
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return country.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell2
+        //cell.textLabel?.text = country[indexPath.row]
+        cell.contentsLable.text = country[indexPath.row]
+        cell.conView.layer.cornerRadius = cell.conView.frame.height/4
         return cell
     }
     
-    
-    
-
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(50)
+    }
 }
-
