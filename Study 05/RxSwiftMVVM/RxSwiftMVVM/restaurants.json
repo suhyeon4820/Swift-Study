@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Blue Legume1",
+        "cuisine" : "european"
+    },
+    {
+        "name" : "Blue Legume2",
+        "cuisine" : "french"
+    },
+    {
+        "name": "Blue Legume3",
+        "cuisine": "european"
+    },
+    {
+        "name": "Blue Legume4",
+        "cuisine": "mexican"
+    },
+    {
+        "name": "Blue Legume5",
+        "cuisine": "mexican"
+    },
+    {
+        "name": "Blue Legume6",
+        "cuisine": "french"
+    }, 
+]

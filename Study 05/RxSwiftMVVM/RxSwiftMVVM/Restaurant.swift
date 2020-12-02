@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+struct Restaurant: Decodable {
+    let name: String
+    let cuisine: Cuisine
+}
+
+enum Cuisine: String, Decodable {
+    case mexican
+    case european
+    case french
+}

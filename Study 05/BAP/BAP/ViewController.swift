@@ -51,6 +51,11 @@ class ViewController: UIViewController, XMLParserDelegate {
         self.navigationItem.titleView = label
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.estimatedRowHeight = 50
+      
+    }
     
     func initSearchBar() {
         //searchBar.enablesReturnKeyAutomatically = false
@@ -123,15 +128,21 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         if filter {
             cell.textLabel?.text = filteredData[indexPath.row]
+            cell.textLabel?.numberOfLines = 0
         } else {
             cell.textLabel?.text = detailData[indexPath.row]
+            cell.textLabel?.numberOfLines = 0
         }
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(60)
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        let row = self.detailData[indexPath.row]
+//        // 글의 길이가 15자가 넘어갈 때마다 40만큼 높이를 높여준다
+//        let height = CGFloat(30 + (row.count / 15) * 40 )
+//        return height
+//        //return CGFloat(60)
+//    }
 }
 
 
