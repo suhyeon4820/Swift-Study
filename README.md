@@ -17,7 +17,7 @@
 | 일자           | 내용                                                         |
 | -------------- | ------------------------------------------------------------ |
 | 1회(10월 24일) | **[ 책 Chapter 01 ]** <br />- [뷰컨트롤러(View Controller)](https://github.com/suhyeon4820/Swift-Study/blob/main/Chapter%2001/Chapter%2001%20.md) |
-| 2회(10월 31일) | **[ 책Chapter 02 ~ 03]**<br />- iOS Framework<br />- iOS LifeCycle<br />- MVC Pattern<br />- ViewController LifeCycle |
+| 2회(10월 31일) | **[ 책Chapter 02 ~ 03]**<br />- [iOS Framework](https://github.com/suhyeon4820/Swift-Study/blob/main/Chapter%2002/iOS%20Framework.md)<br />- iOS LifeCycle<br />- MVC Pattern<br />- ViewController LifeCycle |
 | 3회(11월 07일) | **[ 책Chapter 04 ~ 05]**<br />- 화면 전환<br />- NavigationController |
 | 4회(11월 21일) | **[ 책Chapter 06 ~ 07]**                                     |
 |                |                                                              |
